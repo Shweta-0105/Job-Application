@@ -1,0 +1,62 @@
+.form_container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.form_control{
+    display:flex;
+    flex-direction: column;
+}
+
+label{
+    font-size:15px;
+    margin-bottom: 5px;
+}
+input,select,textarea{
+    padding: 6px 10px;
+    border:1px solid grey;
+    border-radius: 4px;
+    font-size: 15px;
+}
+input:focus{
+    outline-color: red;
+}
+textarea:focus{
+    outline-color:red ;
+}
+select{
+    outline-color: red;
+}
+.button_container{
+    display:flex;
+    justify-content:flex-end;
+    margin-top: 20px;
+}
+button{
+    background-color:blue;
+    border:transparent solid 2px;
+    padding:5px 10px;
+    color:white;
+    border-radius:8px; 
+    transition:0.3s ease-in;
+}
+button:hover{
+    background-color: #ccc;
+    border:2px solid blue;
+    color:black;
+    transition:0.3s ease-out;
+    cursor:pointer;
+
+}
+.text_control{
+    grid-column: 1/span 2;
+}
+.text_control textarea{
+       width:100%;
+}
+@media (max-width:460px){
+    .text_control{
+        grid-column: 1/span 1;
+    }   
+}
